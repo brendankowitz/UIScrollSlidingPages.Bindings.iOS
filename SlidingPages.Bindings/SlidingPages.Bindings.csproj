@@ -46,4 +46,14 @@
     <ObjcBindingCoreSource Include="StructsAndEnums.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Xamarin.ObjcBinding.CSharp.targets" />
+  <ItemGroup>
+    <ObjcBindingNativeLibrary Include="..\vendor\libUIScrollSlidingPagesBindingsSDK.a">
+      <Link>libUIScrollSlidingPagesBindingsSDK.a</Link>
+    </ObjcBindingNativeLibrary>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="libUIScrollSlidingPagesBindingsSDK.linkwith.cs">
+      <DependentUpon>libUIScrollSlidingPagesBindingsSDK.a</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>
