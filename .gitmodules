@@ -1,0 +1,3 @@
+[submodule "vendor/UIScrollSlidingPages"]
+	path = vendor/UIScrollSlidingPages
+	url = git://github.com/TomThorpe/UIScrollSlidingPages.git
