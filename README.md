@@ -1,13 +1,13 @@
 UIScrollSlidingPages.Bindings.iOS
 =================================
 
-Xamarin/iOS bindings for the awesome UIScrollSlidingPages control
+Xamarin/iOS bindings for the awesome UIScrollSlidingPages control (as seen [here](http://github.com/TomThorpe/UIScrollSlidingPages))
 
-Example Screenshots
+Example
 ---
 ####It's Pretty
 
-![Screenshot](https://github.com/TomThorpe/UIScrollSlidingPages/blob/master/Screenshots/uiscrollslidingpages.gif)
+![Screenshot](https://raw.github.com/TomThorpe/UIScrollSlidingPages/master/Screenshots/uiscrollslidingpages.gif)
 
 ####Code
 
