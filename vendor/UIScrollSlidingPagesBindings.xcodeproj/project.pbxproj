@@ -14,6 +14,7 @@
 		624E876418C5ABFC003942BB /* TTSlidingPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 624E875C18C5ABFC003942BB /* TTSlidingPage.m */; };
 		624E876518C5ABFC003942BB /* TTSlidingPageTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 624E875F18C5ABFC003942BB /* TTSlidingPageTitle.m */; };
 		624E876718C5AD19003942BB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 624E876618C5AD19003942BB /* UIKit.framework */; };
+		628A1D3B18D2F9F300D68431 /* TTUITableViewZoomController.m in Sources */ = {isa = PBXBuildFile; fileRef = 628A1D3A18D2F9CC00D68431 /* TTUITableViewZoomController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,7 +48,8 @@
 		624E875F18C5ABFC003942BB /* TTSlidingPageTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTSlidingPageTitle.m; path = UIScrollSlidingPages/UIScrollViewSlidingPages/Source/TTSlidingPageTitle.m; sourceTree = SOURCE_ROOT; };
 		624E876018C5ABFC003942BB /* TTUIScrollViewSlidingPages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTUIScrollViewSlidingPages.h; path = UIScrollSlidingPages/UIScrollViewSlidingPages/Source/TTUIScrollViewSlidingPages.h; sourceTree = SOURCE_ROOT; };
 		624E876618C5AD19003942BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		62E60DC118D2E50100D21FFE /* SupportingLibraries */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SupportingLibraries; path = UIScrollSlidingPages/UIScrollViewSlidingPages/SupportingLibraries; sourceTree = SOURCE_ROOT; };
+		628A1D3918D2F9CC00D68431 /* TTUITableViewZoomController.h */ = {isa = PBXFileReference; lastKnownFileType = file; name = TTUITableViewZoomController.h; path = UIScrollSlidingPages/UIScrollViewSlidingPages/SupportingLibraries/TTUITableViewZoomController.h; sourceTree = "<group>"; };
+		628A1D3A18D2F9CC00D68431 /* TTUITableViewZoomController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TTUITableViewZoomController.m; path = UIScrollSlidingPages/UIScrollViewSlidingPages/SupportingLibraries/TTUITableViewZoomController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +94,8 @@
 		6202502F18C5AB6E00A542F8 /* UIScrollSlidingPagesBindings */ = {
 			isa = PBXGroup;
 			children = (
-				62E60DC118D2E50100D21FFE /* SupportingLibraries */,
+				628A1D3918D2F9CC00D68431 /* TTUITableViewZoomController.h */,
+				628A1D3A18D2F9CC00D68431 /* TTUITableViewZoomController.m */,
 				624E875318C5ABFC003942BB /* Images */,
 				624E875418C5ABFC003942BB /* TTBlackTriangle.h */,
 				624E875518C5ABFC003942BB /* TTBlackTriangle.m */,
@@ -173,6 +176,7 @@
 			files = (
 				624E876518C5ABFC003942BB /* TTSlidingPageTitle.m in Sources */,
 				624E876218C5ABFC003942BB /* TTScrollSlidingPagesController.m in Sources */,
+				628A1D3B18D2F9F300D68431 /* TTUITableViewZoomController.m in Sources */,
 				624E876418C5ABFC003942BB /* TTSlidingPage.m in Sources */,
 				624E876318C5ABFC003942BB /* TTScrollViewWrapper.m in Sources */,
 				624E876118C5ABFC003942BB /* TTBlackTriangle.m in Sources */,
