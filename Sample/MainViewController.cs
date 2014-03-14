@@ -23,6 +23,8 @@ namespace Sample
             slider.TitleScrollerInActiveTextColour = UIColor.Gray;
             slider.TitleScrollerTextDropShadowColour = UIColor.Clear;
             slider.TitleScrollerTextFont = UIFont.BoldSystemFontOfSize (21);
+            slider.TitleScrollerBottomEdgeHeight = 1;
+            slider.TitleScrollerBottomEdgeColour = UIColor.Yellow;
 
 			slider.DataSource = dataSource;
 			slider.View.Frame = View.Frame;

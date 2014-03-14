@@ -143,6 +143,9 @@ namespace SlidingPages.Bindings
         [Export ("titleScrollerBottomEdgeColour", ArgumentSemantic.Retain)]
         UIColor TitleScrollerBottomEdgeColour { get; set; }
 
+        [Export ("titleScrollerBottomEdgeHeight", ArgumentSemantic.Retain)]
+        int TitleScrollerBottomEdgeHeight { get; set; }
+
 		[Export ("disableTitleScrollerShadow")]
 		bool DisableTitleScrollerShadow { get; set; }
 
