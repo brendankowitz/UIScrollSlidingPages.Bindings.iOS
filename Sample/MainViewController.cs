@@ -20,7 +20,7 @@ namespace Sample
 			var slider = new TTScrollSlidingPagesController ();
 			var dataSource = new MainScrollViewDataSource ();
 
-            slider.TitleScrollerNonActiveTextColour = UIColor.Gray;
+            slider.TitleScrollerInActiveTextColour = UIColor.Gray;
             slider.TitleScrollerTextDropShadowColour = UIColor.Clear;
             slider.TitleScrollerTextFont = UIFont.BoldSystemFontOfSize (21);
 
