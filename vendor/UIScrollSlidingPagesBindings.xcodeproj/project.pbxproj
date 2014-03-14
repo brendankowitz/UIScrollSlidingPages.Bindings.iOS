@@ -47,6 +47,7 @@
 		624E875F18C5ABFC003942BB /* TTSlidingPageTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTSlidingPageTitle.m; path = UIScrollSlidingPages/UIScrollViewSlidingPages/Source/TTSlidingPageTitle.m; sourceTree = SOURCE_ROOT; };
 		624E876018C5ABFC003942BB /* TTUIScrollViewSlidingPages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTUIScrollViewSlidingPages.h; path = UIScrollSlidingPages/UIScrollViewSlidingPages/Source/TTUIScrollViewSlidingPages.h; sourceTree = SOURCE_ROOT; };
 		624E876618C5AD19003942BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		62E60DC118D2E50100D21FFE /* SupportingLibraries */ = {isa = PBXFileReference; lastKnownFileType = folder; name = SupportingLibraries; path = UIScrollSlidingPages/UIScrollViewSlidingPages/SupportingLibraries; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +92,7 @@
 		6202502F18C5AB6E00A542F8 /* UIScrollSlidingPagesBindings */ = {
 			isa = PBXGroup;
 			children = (
+				62E60DC118D2E50100D21FFE /* SupportingLibraries */,
 				624E875318C5ABFC003942BB /* Images */,
 				624E875418C5ABFC003942BB /* TTBlackTriangle.h */,
 				624E875518C5ABFC003942BB /* TTBlackTriangle.m */,

@@ -128,8 +128,20 @@ namespace SlidingPages.Bindings
 		[Export ("titleScrollerTextColour", ArgumentSemantic.Retain)]
 		UIColor TitleScrollerTextColour { get; set; }
 
+        [Export ("titleScrollerNonActiveTextColour", ArgumentSemantic.Retain)]
+        UIColor TitleScrollerNonActiveTextColour { get; set; }
+
+        [Export ("titleScrollerTextDropShadowColour", ArgumentSemantic.Retain)]
+        UIColor TitleScrollerTextDropShadowColour { get; set; }
+
+        [Export ("titleScrollerTextFont", ArgumentSemantic.Retain)]
+        UIFont TitleScrollerTextFont { get; set; }
+
 		[Export ("triangleBackgroundColour", ArgumentSemantic.Retain)]
 		UIColor TriangleBackgroundColour { get; set; }
+
+        [Export ("titleScrollerBottomEdgeColour", ArgumentSemantic.Retain)]
+        UIColor TitleScrollerBottomEdgeColour { get; set; }
 
 		[Export ("disableTitleScrollerShadow")]
 		bool DisableTitleScrollerShadow { get; set; }
