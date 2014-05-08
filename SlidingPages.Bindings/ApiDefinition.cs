@@ -211,7 +211,7 @@ namespace SlidingPages.Bindings
 		UIImage HeaderImage { get; set; }
 	}
 
-	[Model, BaseType (typeof (NSObject))]
+	[Model, Protocol, BaseType (typeof (NSObject))]
 	public partial interface TTSlidingPagesDataSource {
 
 		[Export ("numberOfPagesForSlidingPagesViewController:")]
