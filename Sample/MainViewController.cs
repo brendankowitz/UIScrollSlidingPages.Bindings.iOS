@@ -6,11 +6,13 @@ using System.Collections.Generic;
 
 namespace Sample
 {
-	public partial class MainViewController : UIViewController
+    public partial class MainViewController : UIViewController, ITTSlidingPagesDataSource
 	{
+        List<UIViewController> views;
+
 		public MainViewController () : base ("MainViewController", null)
 		{
-			// Custom initialization
+            views = new List<UIViewController> ();
 		}
 
 		public override void ViewDidLoad ()
@@ -18,7 +20,6 @@ namespace Sample
 			base.ViewDidLoad ();
 			
 			var slider = new TTScrollSlidingPagesController ();
-			var dataSource = new MainScrollViewDataSource ();
 
             slider.TitleScrollerInActiveTextColour = UIColor.Gray;
             slider.TitleScrollerTextDropShadowColour = UIColor.Clear;
@@ -26,12 +27,12 @@ namespace Sample
             slider.TitleScrollerBottomEdgeHeight = 1;
             slider.TitleScrollerBottomEdgeColour = UIColor.Yellow;
 
-			slider.DataSource = dataSource;
+            slider.DataSource = this;
 			slider.View.Frame = View.Frame;
 
-			dataSource.AddView (new SampleViewController () {Title = "Page 1" });
-			dataSource.AddView (new SampleViewController () {Title = "Page 2" });
-			dataSource.AddView (new SampleViewController () {Title = "Page 3" });
+			AddView (new SampleViewController () {Title = "Page 1" });
+			AddView (new SampleViewController () {Title = "Page 2" });
+			AddView (new SampleViewController () {Title = "Page 3" });
 
 			View.AddSubview (slider.View);
 			AddChildViewController (slider);
@@ -49,37 +50,28 @@ namespace Sample
 		{
 
 		}
+
+        public void AddView(UIViewController controller)
+        {
+            views.Add (controller);
+        }
+
+        int ITTSlidingPagesDataSource.NumberOfPagesForSlidingPagesViewController (TTScrollSlidingPagesController source)
+        {
+            return views.Count;
+        }
+
+        TTSlidingPageTitle ITTSlidingPagesDataSource.TitleForSlidingPagesViewController (TTScrollSlidingPagesController source, int index)
+        {
+            var view = views [index];
+            return new TTSlidingPageTitle (view.Title);
+        }
+
+        TTSlidingPage ITTSlidingPagesDataSource.PageForSlidingPagesViewController (TTScrollSlidingPagesController source, int index)
+        {
+            return new TTSlidingPage (views [index]);
+        }
 	}
 
-	public class MainScrollViewDataSource : TTSlidingPagesDataSource
-	{
-		List<UIViewController> views;
-
-		public MainScrollViewDataSource(){
-			views = new List<UIViewController> ();
-		}
-
-		public void AddView(UIViewController controller)
-		{
-			views.Add (controller);
-		}
-
-		public override int NumberOfPagesForSlidingPagesViewController (TTScrollSlidingPagesController source)
-		{
-			return views.Count;
-		}
-
-		public override TTSlidingPageTitle TitleForSlidingPagesViewController (TTScrollSlidingPagesController source, int index)
-		{
-			var view = views [index];
-			return new TTSlidingPageTitle (view.Title);
-		}
-
-		public override TTSlidingPage PageForSlidingPagesViewController (TTScrollSlidingPagesController source, int index)
-		{
-			return new TTSlidingPage (views [index]);
-		}
-			
-	}
 }
 

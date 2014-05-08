@@ -48,7 +48,7 @@
 		624E875F18C5ABFC003942BB /* TTSlidingPageTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TTSlidingPageTitle.m; path = UIScrollSlidingPages/UIScrollViewSlidingPages/Source/TTSlidingPageTitle.m; sourceTree = SOURCE_ROOT; };
 		624E876018C5ABFC003942BB /* TTUIScrollViewSlidingPages.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TTUIScrollViewSlidingPages.h; path = UIScrollSlidingPages/UIScrollViewSlidingPages/Source/TTUIScrollViewSlidingPages.h; sourceTree = SOURCE_ROOT; };
 		624E876618C5AD19003942BB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		628A1D3918D2F9CC00D68431 /* TTUITableViewZoomController.h */ = {isa = PBXFileReference; lastKnownFileType = file; name = TTUITableViewZoomController.h; path = UIScrollSlidingPages/UIScrollViewSlidingPages/SupportingLibraries/TTUITableViewZoomController.h; sourceTree = "<group>"; };
+		628A1D3918D2F9CC00D68431 /* TTUITableViewZoomController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TTUITableViewZoomController.h; path = UIScrollSlidingPages/UIScrollViewSlidingPages/SupportingLibraries/TTUITableViewZoomController.h; sourceTree = "<group>"; };
 		628A1D3A18D2F9CC00D68431 /* TTUITableViewZoomController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = TTUITableViewZoomController.m; path = UIScrollSlidingPages/UIScrollViewSlidingPages/SupportingLibraries/TTUITableViewZoomController.m; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -149,7 +149,7 @@
 		6202502218C5AB6D00A542F8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = "Brendan Kowitz";
 			};
 			buildConfigurationList = 6202502518C5AB6D00A542F8 /* Build configuration list for PBXProject "UIScrollSlidingPagesBindings" */;
@@ -190,7 +190,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -228,7 +227,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
