@@ -7,19 +7,19 @@ using System.Collections.Generic;
 namespace Sample
 {
     public partial class MainViewController : UIViewController, ITTSlidingPagesDataSource
-	{
+    {
         List<UIViewController> views;
 
-		public MainViewController () : base ("MainViewController", null)
-		{
+        public MainViewController () : base ("MainViewController", null)
+        {
             views = new List<UIViewController> ();
-		}
+        }
 
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
 			
-			var slider = new TTScrollSlidingPagesController ();
+            var slider = new TTScrollSlidingPagesController ();
 
             slider.TitleScrollerInActiveTextColour = UIColor.Gray;
             slider.TitleScrollerTextDropShadowColour = UIColor.Clear;
@@ -28,30 +28,30 @@ namespace Sample
             slider.TitleScrollerBottomEdgeColour = UIColor.Yellow;
 
             slider.DataSource = this;
-			slider.View.Frame = View.Frame;
+            slider.View.Frame = View.Frame;
 
-			AddView (new SampleViewController () {Title = "Page 1" });
-			AddView (new SampleViewController () {Title = "Page 2" });
-			AddView (new SampleViewController () {Title = "Page 3" });
+            AddView (new SampleViewController () { Title = "Page 1" });
+            AddView (new SampleViewController () { Title = "Page 2" });
+            AddView (new SampleViewController () { Title = "Page 3" });
 
-			View.AddSubview (slider.View);
-			AddChildViewController (slider);
-		}
+            View.AddSubview (slider.View);
+            AddChildViewController (slider);
+        }
 
-		public override void DidReceiveMemoryWarning ()
-		{
-			// Releases the view if it doesn't have a superview.
-			base.DidReceiveMemoryWarning ();
+        public override void DidReceiveMemoryWarning ()
+        {
+            // Releases the view if it doesn't have a superview.
+            base.DidReceiveMemoryWarning ();
 			
-			// Release any cached data, images, etc that aren't in use.
-		}
+            // Release any cached data, images, etc that aren't in use.
+        }
 
-		partial void showInfo (NSObject sender)
-		{
+        partial void showInfo (NSObject sender)
+        {
 
-		}
+        }
 
-        public void AddView(UIViewController controller)
+        public void AddView (UIViewController controller)
         {
             views.Add (controller);
         }
@@ -71,7 +71,6 @@ namespace Sample
         {
             return new TTSlidingPage (views [index]);
         }
-	}
-
+    }
 }
 
