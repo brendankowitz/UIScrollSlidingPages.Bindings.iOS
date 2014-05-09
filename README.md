@@ -3,6 +3,10 @@ UIScrollSlidingPages.Bindings.iOS
 
 Xamarin/iOS bindings for the awesome UIScrollSlidingPages control (as seen [here](http://github.com/TomThorpe/UIScrollSlidingPages))
 
+Nuget
+---
+Install-Package [UIScrollSlidingPages.Bindings](https://www.nuget.org/packages/UIScrollSlidingPages.Bindings/)
+
 Example
 ---
 ####It's Pretty
