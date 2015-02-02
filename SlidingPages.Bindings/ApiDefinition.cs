@@ -89,6 +89,9 @@ namespace SlidingPages.Bindings
         [Export ("titleScrollerBottomEdgeHeight", ArgumentSemantic.Retain)]
         int TitleScrollerBottomEdgeHeight { get; set; }
 
+        [Export ("disableTitleShadow", ArgumentSemantic.Retain)]
+        bool DisableTitleShadow { get; set; }
+
         [Export ("disableTitleScrollerShadow")]
         bool DisableTitleScrollerShadow { get; set; }
 
