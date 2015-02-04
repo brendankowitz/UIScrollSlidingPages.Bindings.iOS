@@ -22,7 +22,7 @@ namespace Sample
             var slider = new TTScrollSlidingPagesController ();
 
             slider.TitleScrollerInActiveTextColour = UIColor.Gray;
-            slider.TitleScrollerTextDropShadowColour = UIColor.Clear;
+            slider.TitleScrollerTextDropShadowColour = UIColor.White;
             slider.TitleScrollerTextFont = UIFont.BoldSystemFontOfSize (21);
             slider.TitleScrollerBottomEdgeHeight = 1;
             slider.TitleScrollerBottomEdgeColour = UIColor.Yellow;
