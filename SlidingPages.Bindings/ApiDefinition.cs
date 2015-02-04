@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Drawing;
-using MonoTouch.ObjCRuntime;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using Foundation;
+using ObjCRuntime;
+using UIKit;
 
 namespace SlidingPages.Bindings
 {
@@ -42,13 +42,13 @@ namespace SlidingPages.Bindings
         void ReloadPages ();
 
         [Export ("scrollToPage:animated:")]
-        void ScrollToPage (int page, bool animated);
+        void ScrollToPage (nint page, bool animated);
 
         [Export ("getCurrentDisplayedPage")] //, Verify ("ObjC method massaged into getter property")]
-		int GetCurrentDisplayedPage { get; }
+		nint GetCurrentDisplayedPage { get; }
 
         [Export ("getXPositionOfPage:")]
-        int GetXPositionOfPage (int page);
+        nint GetXPositionOfPage (nint page);
 
         [Export ("dataSource", ArgumentSemantic.Assign)]
         ITTSlidingPagesDataSource DataSource { get; set; }
@@ -60,10 +60,10 @@ namespace SlidingPages.Bindings
         bool TitleScrollerHidden { get; set; }
 
         [Export ("titleScrollerHeight")]
-        int TitleScrollerHeight { get; set; }
+        nint TitleScrollerHeight { get; set; }
 
         [Export ("titleScrollerItemWidth")]
-        int TitleScrollerItemWidth { get; set; }
+        nint TitleScrollerItemWidth { get; set; }
 
         [Export ("titleScrollerBackgroundColour", ArgumentSemantic.Retain)]
         UIColor TitleScrollerBackgroundColour { get; set; }
@@ -87,7 +87,7 @@ namespace SlidingPages.Bindings
         UIColor TitleScrollerBottomEdgeColour { get; set; }
 
         [Export ("titleScrollerBottomEdgeHeight", ArgumentSemantic.Retain)]
-        int TitleScrollerBottomEdgeHeight { get; set; }
+        nint TitleScrollerBottomEdgeHeight { get; set; }
 
         [Export ("disableTitleShadow", ArgumentSemantic.Retain)]
         bool DisableTitleShadow { get; set; }
@@ -99,7 +99,7 @@ namespace SlidingPages.Bindings
         bool DisableUIPageControl { get; set; }
 
         [Export ("initialPageNumber")]
-        int InitialPageNumber { get; set; }
+        nint InitialPageNumber { get; set; }
 
         [Export ("pagingEnabled")]
         bool PagingEnabled { get; set; }
@@ -123,7 +123,7 @@ namespace SlidingPages.Bindings
     {
         [Abstract]
         [Export ("didScrollToViewAtIndex:")]
-        void DidScrollToViewAtIndex (uint index);
+        void DidScrollToViewAtIndex (nuint index);
     }
 
     public interface ITTSliddingPageDelegate
@@ -168,18 +168,18 @@ namespace SlidingPages.Bindings
     {
         [Abstract]
         [Export ("numberOfPagesForSlidingPagesViewController:")]
-        int NumberOfPagesForSlidingPagesViewController (TTScrollSlidingPagesController source);
+        nint NumberOfPagesForSlidingPagesViewController (TTScrollSlidingPagesController source);
 
         [Abstract]
         [Export ("pageForSlidingPagesViewController:atIndex:")]
-        TTSlidingPage PageForSlidingPagesViewController (TTScrollSlidingPagesController source, int index);
+        TTSlidingPage PageForSlidingPagesViewController (TTScrollSlidingPagesController source, nint index);
 
         [Abstract]
         [Export ("titleForSlidingPagesViewController:atIndex:")]
-        TTSlidingPageTitle TitleForSlidingPagesViewController (TTScrollSlidingPagesController source, int index);
+        TTSlidingPageTitle TitleForSlidingPagesViewController (TTScrollSlidingPagesController source, nint index);
 
         [Export ("widthForPageOnSlidingPagesViewController:atIndex:")]
-        int WidthForPageOnSlidingPagesViewController (TTScrollSlidingPagesController source, int index);
+        nint WidthForPageOnSlidingPagesViewController (TTScrollSlidingPagesController source, nint index);
     }
 
     public interface ITTSlidingPagesDataSource

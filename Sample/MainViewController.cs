@@ -1,6 +1,6 @@
-﻿using System;
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
+using System;
+using Foundation;
+using UIKit;
 using SlidingPages.Bindings;
 using System.Collections.Generic;
 
@@ -57,20 +57,20 @@ namespace Sample
             views.Add (controller);
         }
 
-        int ITTSlidingPagesDataSource.NumberOfPagesForSlidingPagesViewController (TTScrollSlidingPagesController source)
+        nint ITTSlidingPagesDataSource.NumberOfPagesForSlidingPagesViewController (TTScrollSlidingPagesController source)
         {
             return views.Count;
         }
 
-        TTSlidingPageTitle ITTSlidingPagesDataSource.TitleForSlidingPagesViewController (TTScrollSlidingPagesController source, int index)
+        TTSlidingPageTitle ITTSlidingPagesDataSource.TitleForSlidingPagesViewController (TTScrollSlidingPagesController source, nint index)
         {
-            var view = views [index];
+            var view = views [(int)index];
             return new TTSlidingPageTitle (view.Title);
         }
 
-        TTSlidingPage ITTSlidingPagesDataSource.PageForSlidingPagesViewController (TTScrollSlidingPagesController source, int index)
+        TTSlidingPage ITTSlidingPagesDataSource.PageForSlidingPagesViewController (TTScrollSlidingPagesController source, nint index)
         {
-            return new TTSlidingPage (views [index]);
+            return new TTSlidingPage (views [(int)index]);
         }
     }
 }
