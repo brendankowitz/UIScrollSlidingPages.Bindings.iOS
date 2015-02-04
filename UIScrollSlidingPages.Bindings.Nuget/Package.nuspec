@@ -2,15 +2,17 @@
 <package >
   <metadata>
     <id>UIScrollSlidingPages.Bindings</id>
-    <version>1.0.0</version>
+    <version>1.0.4</version>
     <title>UIScrollSlidingPages Bindings for Xamarin/iOS</title>
-    <authors>Brendan Kowitz</authors>
-    <owners>Brendan Kowitz</owners>
+    <authors>Brendan Kowitz, Shannon Lewis</authors>
+    <owners>brendankowitz, slewis74</owners>
     <description>
       Provides Xamarin/iOS bindings for the awesome UIScrollSlidingPages control
     </description>
     <releaseNotes>
-      * Initial nuget release
+      * Updated to Universal API
+      * Dropped support for Classic API
+      * Added DisableTitleShadow property
     </releaseNotes>
     <summary>
       Xamarin/iOS bindings for the awesome UIScrollSlidingPages control
@@ -20,7 +22,7 @@
     <iconUrl>https://nuget.org/Content/Images/packageDefaultIcon-50x50.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>https://github.com/TomThorpe/UIScrollSlidingPages/blob/master/LICENSE.txt</licenseUrl>
-    <copyright>Copyright 2014</copyright>
+    <copyright>Copyright 2015</copyright>
     <tags>iOS Xamarin UIScrollSlidingPages</tags>
   </metadata>
   <files>
